@@ -1,10 +1,87 @@
+<!DOCTYPE html>
 <html>
-
-<head>
-</head>
-
-<body>
-<h3>Hello There</h3>
-</body>
-
+	<head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="main.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>	
+		<script src="main.js"></script>
+		<script src="player.js"></script>
+		<script src="playerBullet.js"></script>
+		<script src="enemy.js"></script>
+		<script src="enemyBullet.js"></script>
+		<script src="gameText.js"></script>
+	</head>
+	<body id="body">
+		<button id="god" class="btn btn-danger">Easy Modo &#9320</button>
+		
+		<div id="controls">
+			<table>
+				<tr style="border-bottom:1px solid black;">
+					<td colspan="2" class="title">Controls</td>
+				</tr>
+				<tr>
+					<td class="desc">Movement :</td>
+					<td>Arrow Key or WASD</td>
+				</tr>
+				<tr>
+					<td class="desc">Slow :</td>
+					<td>Shift Key</td>
+				</tr>
+				<tr>
+					<td class="desc">Bomb :</td>
+					<td>X</td>
+				</tr>
+				<tr><td></td><td></td></tr>
+				<tr style="border-bottom:1px solid black;">
+					<td colspan="2" class="title">Settings</td>
+				</tr>
+				<tr>
+					<td class="desc">Difficulty: </td>
+					<td>
+						<select id="difficulty" class="form-control form-control-sm">
+							<option value="2">Easier</option>
+							<option selected value="1">Default</option>
+							<option value="0.75">Harder</option>
+						</select>
+					</td>
+				</tr>
+				<tr><td></td><td></td></tr>
+				<tr style="border-bottom:1px solid black;">
+					<td colspan="2" class="title">Stats</td>
+				</tr>
+				<tr>
+					<td class="desc">Bullet Eaten :</td>
+					<td id="bulletEaten">0</td>
+				</tr>
+				<tr>
+					<td class="desc">Live :</td>
+					<td id="playerLive">3</td>
+				</tr>
+				<tr>
+					<td class="desc">Bomb :</td>
+					<td id="playerBomb">3</td>
+				</tr>
+			</table>
+		</div>
+		
+		<div id="intro">
+			<h3>Story of Boxes and Circles</h3>
+			<span>Few years ago, the Circles have dominate and rule over the Boxes all over the world.</span><br/>
+			<span>And now, we have you!</span><br/>
+			<span>It's time to make the Circles pay.</span><br/>
+			<button id="startGame" class="btn btn-success">Begin</button>
+		</div>
+		
+		<div id="retry">
+			<h3 id="retryTitle">Game Over</h3>
+			<span id="retryPhase"></span><br/>
+			<span id="retryCircleHp"></span><br/>
+			<button id="restart" class="btn btn-info">Restart</button>
+		</div>
+		
+		<div id="main">
+			<canvas id="cv1" width="600px" height="700px"></canvas>
+		</div>
+	</body>
 </html>

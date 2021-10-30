@@ -1,0 +1,74 @@
+html, body{
+	height:100%;
+	background:aliceblue;
+	overflow: hidden;
+}
+#main{
+	height:calc(100vh - 10px);
+	width: calc(100vw);
+	margin: 5px 0;
+	text-align: center;
+}
+#cv1{
+	border:1px solid lightgrey;
+}
+#god{
+	position:absolute;
+	top:10px;
+	left:10px;
+	opacity: 0.1;
+}
+#god:hover{
+	opacity: 0.5;
+}
+#controls{
+	position:absolute;
+	top:80px;
+	left:10px;
+}
+#intro{
+	position:absolute;
+	top: calc(50vh - 100px);
+	width: 100vw;
+	text-align:center;
+	word-spacing: 1px;
+    line-height: 1;
+}
+#intro h3{
+	margin:0px;
+}
+#intro span{
+	font-style: italic;
+	font-size:11px;
+	margin:0 0 5px 0;
+	padding:0px;
+}
+#intro button, #retry button{
+	margin-top: 10px;
+}
+#retry{
+	position:absolute;
+	top: calc(50vh - 100px);
+	width: 100vw;
+	text-align:center;
+	display:none;
+	word-spacing: 1px;
+    line-height: 1;
+}
+#retry h3{
+	font-family: Comic Sans Ms;
+	font-weight: bold;
+	color: Crimson;
+	margin:0px;
+}
+select{
+	cursor:pointer;
+}
+.desc{
+	text-align:right; 
+	font-weight:bold;
+}
+.title{
+	text-align: center; 
+	font-weight:bold;
+}
