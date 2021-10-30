@@ -53,9 +53,17 @@ var enemyLeftSpeed = 1;
 function moveEnemyLeftRight(){
 	if(level >= 2){
 		if(enemy.x < originalX - 150){
-			enemyLeftSpeed = 1;
+			enemyLeftSpeed = Math.random() * 150;
+			if(enemyLeftSpeed > originalX + 150)
+			{
+				enemyLeftSpeed = 150 - enemyLeftSpeed;
+			}
 		}else if(enemy.x > originalX + 150){
-			enemyLeftSpeed = -1;
+			enemyLeftSpeed = -(Math.random() * 150);
+			if(enemyLeftSpeed < originalX - 150)
+			{
+				enemyLeftSpeed = 150 + enemyLeftSpeed;
+			}
 		}
 		enemy.x += enemyLeftSpeed;
 	}
