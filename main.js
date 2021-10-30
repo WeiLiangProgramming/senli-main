@@ -84,14 +84,14 @@ function startGame(){
 	timerList.refreshCanvasTimer = setInterval(function(){
 		ctx.clearRect(0, 0, $(c).width(), $(c).height());
 		
-		drawPlayer();
-		drawPlayerBullet();
+		//drawPlayer();
+		//drawPlayerBullet();
 		drawEnemy();
 		drawEnemyBullet();
 	}, 15);
 	
 	initPlayerMoveListener();
-	initPlayerBullet();
+	//initPlayerBullet();
 	initEnemyBullet();
 }
 
